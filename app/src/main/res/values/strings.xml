@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">PayPos</string>
+    <string name="creerCompte"><u>Inscrivez-vous !</u></string>
+    <string name="email">Email</string>
+    <string name="form_password">Mot de passe</string>
+    <string name="bienvenue">BIENVENUE SUR AMENPAY</string>
+    <string name="form_GSM">Numéro GSM</string>
+    <string name="valider">Valider</string>
+    <string name="nom">Nom</string>
+    <string name="prenom">Prenom</string>
+</resources>
