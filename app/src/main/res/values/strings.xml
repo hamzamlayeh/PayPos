@@ -8,4 +8,7 @@
     <string name="valider">Valider</string>
     <string name="nom">Nom</string>
     <string name="prenom">Prenom</string>
+    <string name="chek_internet">Vous n\'êtes pas connectés à Internet</string>
+    <string name="champs_obligatoir">Champ obligatoire</string>
+    <string name="email_invalide">Adresse mail invalide</string>
 </resources>
