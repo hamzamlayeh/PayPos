@@ -2,25 +2,112 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.paypos">
 
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.INTERNET" />
     <application
-        android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SplashActivity">
+        <activity android:name=".PaimentCommercantActivity"></activity>
+        <activity android:name=".AlimentationCompte" />
+        <activity android:name=".TransfertArgentActivity" />
+        <activity
+            android:name=".HistoriqueRechargeTelMenu"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".HistoriqueServiceMenu"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".HistoriqueRechercheFilter"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".HistoriqueMenu"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActivityEnConstruction"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RechargeCrtEdinarActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AffiliationCrtActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RechargeCrtEdinarMenu"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RechargeCrtMenu"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PaiementFactActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PaiementFactMenu"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RechargeTelMenu"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ConsulteSoldeMenu"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ModePaiement"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AlimentationCompteSolde"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ParametreActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ParametreMenuActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ManuelPDFActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RibActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ContactActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SplashActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Authentification" />
-        <activity android:name=".Inscription" />
-        <activity android:name=".MainActivity" />
+        <activity
+            android:name=".Authentification"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Inscription"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait" />
     </application>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.Manifest.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <uses-permission android:name="android.permission.NFC" />
 
 </manifest>

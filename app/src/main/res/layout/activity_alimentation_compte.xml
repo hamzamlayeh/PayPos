@@ -1,0 +1,82 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/AppTheme.PopupOverlay" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_alimentation_compte"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="3.3"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <TextView
+                android:id="@+id/txtMode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="La Poste"
+                android:textAlignment="center"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+            <Spinner
+                android:id="@+id/spnBanq"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"/>
+
+            <EditText
+                android:id="@+id/txtRefBord"
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:hint="Numéro bordereau"/>
+
+
+            <EditText
+                android:id="@+id/txtMontant"
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:enabled="false"
+                android:focusable="false"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:hint="Montant en dinars"/>
+
+            <Button
+                android:id="@+id/btn_envoyer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"
+                android:padding="10dp"
+                android:background="#00a65a"
+                android:textColor="#ffffff"
+                android:text="Envoyer" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

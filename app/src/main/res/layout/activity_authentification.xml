@@ -1,130 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="@drawable/arriere_plan_interface_acces"
     tools:context=".Authentification">
-
-    <TextView
-        android:id="@+id/bienvenue"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="8dp"
-        android:text="@string/bienvenue"
-        android:textAlignment="center"
-        android:textColor="@color/bleu"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <android.support.design.widget.TextInputLayout
-        android:id="@+id/loginLayout"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="8dp"
-        android:padding="8dp"
-        android:textColorHint="@color/holo_green_15"
-        android:theme="@style/ThemeSpinner"
-        app:hintTextAppearance="@style/TextLabel"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bienvenue"
-        app:errorEnabled="true">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1.8"/>
 
-        <android.support.design.widget.TextInputEditText
-            android:id="@+id/email"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:drawableStart="@drawable/ic_email"
-            android:drawablePadding="8dp"
-            android:hint="@string/email"
-            android:inputType="textEmailAddress"
-            android:textColorHint="@color/holo_green_15"
-            android:textSize="18sp"
-            android:theme="@style/ThemeSpinner" />
-
-    </android.support.design.widget.TextInputLayout>
-
-    <android.support.design.widget.TextInputLayout
-        android:id="@+id/pwdLayout"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:padding="8dp"
-        android:textColorHint="@color/holo_green_15"
-        android:theme="@style/ThemeSpinner"
-        app:hintTextAppearance="@style/TextLabel"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginLayout"
-        app:passwordToggleEnabled="true"
-        app:errorEnabled="true">
-
-        <android.support.design.widget.TextInputEditText
-            android:id="@+id/password"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1">
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:drawableStart="@drawable/ic_password"
-            android:drawablePadding="8dp"
-            android:hint="@string/form_password"
-            android:inputType="textPassword"
-            android:maxLength="15"
-            android:textColorHint="@color/holo_green_15"
-            android:textSize="18sp"
-            android:theme="@style/ThemeSpinner" />
+            android:layout_height="120dp"
+            android:background="@drawable/arriere_plan_identifiant"
+            android:orientation="vertical">
+            <EditText
+                android:id="@+id/txtLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="50dp"
+                android:inputType="text"
+                android:text=""
+                android:hint="@string/email"/>
 
-    </android.support.design.widget.TextInputLayout>
 
-    <Button
-        android:id="@+id/btn_login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="32dp"
-        android:background="@color/colorAccent"
-        android:text="@string/valider"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pwdLayout" />
+            <EditText
+                android:id="@+id/txtPassword"
+                android:layout_width="match_parent"
+                android:layout_marginTop="22dp"
+                android:layout_marginLeft="50dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:text=""
+                android:hint="Mot de passe"/>
 
-    <TextView
-        android:id="@+id/newAccountMessage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Vous n'êtes pas encore abonné ?"
-        android:textAlignment="center"
-        android:textColor="@color/holo_green_15"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_login" />
 
-    <TextView
-        android:id="@+id/newAccount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/creerCompte"
-        android:textAlignment="viewStart"
-        android:textColor="@color/holo_green_15"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/newAccountMessage" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <CheckBox
+                android:id="@+id/saveSession"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Enregistrer votre session" />
 
-</android.support.constraint.ConstraintLayout>
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_marginTop="15dp"
+                android:padding="10dp"
+                android:background="@drawable/bouton_login"
+                android:textColor="#ffffff"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:layout_weight="1.2">
+            <ImageButton
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:background="@drawable/icon_fb"
+                android:layout_marginLeft="5dp"
+                android:text="Informations de compte oubliées ?"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="#0a0c8c"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:text="www.facebook.com/pointcashtunisie"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

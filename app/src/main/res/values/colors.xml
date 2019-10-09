@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#7489FF</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="ooredoo">#e5ff003b</color>
+    <color name="orange">#e5ff7b00</color>
+    <color name="telecom">#e50040ff</color>
+
     <color name="white">#FFFFFF</color>
     <color name="holo_green_15">#7489FF</color>
     <color name="bleu">#094b9c</color>
