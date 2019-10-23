@@ -4,17 +4,27 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.design.widget.TextInputEditText;
 import android.support.design.widget.TextInputLayout;
+import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.paypos.Model.RSResponse;
 import com.example.paypos.Model.User;
+import com.example.paypos.Utils.Constants;
 import com.example.paypos.Utils.Helpers;
+import com.example.paypos.Utils.Loader;
+import com.example.paypos.WebService.WebService;
+import com.example.paypos.session.RSSession;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 import static com.example.paypos.Utils.Util.getImei;
 
@@ -26,6 +36,7 @@ public class Authentification extends AppCompatActivity {
     EditText Password;
     String iemi, email, password;
     Context context;
+    DialogFragment Loding = Loader.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,8 +54,33 @@ public class Authentification extends AppCompatActivity {
         password = Password.getText().toString().trim();
         if (Valider()) {
             if (Helpers.isConnected(context)) {
+                Loding.show(getSupportFragmentManager(), Constants.LODING);
                 User user = new User(email, password);
-                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                Call<RSResponse> callUpload = WebService.getInstance().getApi().loginUser(user);
+                callUpload.enqueue(new Callback<RSResponse>() {
+                    @Override
+                    public void onResponse(Call<RSResponse> call, Response<RSResponse> response) {
+                        if (response.body() != null) {
+                            Loding.dismiss();
+                            if (response.body().getStatus() == 1) {
+                                RSSession.saveIntoSharedPreferences(response.body().getData(), context);
+                                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                            } else if (response.body().getStatus() == 0) {
+                                Toast.makeText(context, "connexion echoueé", Toast.LENGTH_SHORT).show();
+                            } else if (response.body().getStatus() == 2) {
+                                Toast.makeText(context, getString(R.string.EmailOuMotDePasseInvalide), Toast.LENGTH_SHORT).show();
+                            }
+                        }else {
+                            Loding.dismiss();
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<RSResponse> call, Throwable t) {
+                        Loding.dismiss();
+                        Log.i("err", t.getMessage());
+                    }
+                });
             } else {
                 Helpers.ShowMessageConnection(context);
             }

@@ -29,16 +29,15 @@
             android:orientation="vertical"
             android:layout_weight="1">
 
-
             <EditText
-                android:id="@+id/txtRefFact"
+                android:id="@+id/txtEmail"
                 android:layout_width="match_parent"
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="30dp"
                 android:layout_marginLeft="30dp"
                 android:layout_height="wrap_content"
                 android:inputType="text"
-                android:hint="Numéro de téléphone"/>
+                android:hint="@string/email"/>
 
             <EditText
                 android:id="@+id/txtMontant"

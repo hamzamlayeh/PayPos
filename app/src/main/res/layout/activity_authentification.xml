@@ -29,7 +29,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="3dp"
-                android:layout_marginLeft="50dp"
+                android:layout_marginStart="50dp"
                 android:inputType="text"
                 android:text=""
                 android:hint="@string/email"/>
@@ -39,11 +39,11 @@
                 android:id="@+id/txtPassword"
                 android:layout_width="match_parent"
                 android:layout_marginTop="22dp"
-                android:layout_marginLeft="50dp"
+                android:layout_marginStart="50dp"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
                 android:text=""
-                android:hint="Mot de passe"/>
+                android:hint="@string/form_password"/>
 
 
         </LinearLayout>
@@ -79,7 +79,7 @@
                 android:layout_height="70dp"
                 android:layout_gravity="center"
                 android:background="@drawable/icon_fb"
-                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
                 android:text="Informations de compte oubliées ?"/>
             <TextView
                 android:layout_width="wrap_content"

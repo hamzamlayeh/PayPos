@@ -25,68 +25,9 @@ public interface API {
     @POST("Login.php")
     Call<RSResponse> loginUser(@Body User user);
 
-    //Inscription
-    @Multipart
-    @POST("Inscription.php")
-    Call<RSResponse> inscrireUser(
-            @Part MultipartBody.Part part,
-            @Part("nom") RequestBody nom,
-            @Part("prenom") RequestBody prenom,
-            @Part("tel") RequestBody tel,
-            @Part("email") RequestBody email,
-            @Part("password") RequestBody password
-    );
+    //User
+    @FormUrlEncoded
+    @POST("GetUserByEmail.php")
+    Call<RSResponse> VerifUserByEmail(@Field("email") String email);
 
-//    //Artiste
-//    @GET("Artiste.php")
-//    Call<RSResponse> loadArtiste();
-//
-//    //Programme
-//    @GET("Programme.php")
-//    Call<RSResponse> loadProgramme();
-//
-//    @GET("ProgrammeArtiste.php")
-//    Call<RSResponse> loadArtisteProgramee();
-//
-//    //Sponsor
-//    @GET("Sponsor.php")
-//    Call<RSResponse> loadSponsor();
-//
-//    //User
-//    @Multipart
-//    @POST("UpdateUser.php")
-//    Call<RSResponse> updateUser(
-//            @Part MultipartBody.Part part,
-//            @Part("nom") RequestBody nom,
-//            @Part("prenom") RequestBody prenom,
-//            @Part("tel") RequestBody tel,
-//            @Part("password") RequestBody password,
-//            @Part("id_user") RequestBody id_user
-//    );
-//
-//    @FormUrlEncoded
-//    @POST("UpdateScore.php")
-//    Call<RSResponse> updateScore(@Field("id_user") int id_user, @Field("score") int score);
-//
-//    @POST("UserQuiz.php")
-//    Call<RSResponse> addUserQuiz(@Body UserQuiz userQuiz);
-//
-//    @Multipart
-//    @POST("UserSelfi.php")
-//    Call<RSResponse> userSelfi(
-//            @Part MultipartBody.Part part,
-//            @Part("id_user") RequestBody id_user,
-//            @Part("date_jouer") RequestBody date_jouer
-//    );
-//
-//    @GET("GetScore.php")
-//    Call<RSResponse> getScore(@Query("id_user") int id_user);
-//
-//    //Quiz
-//    @FormUrlEncoded
-//    @POST("GetDaysQuiz.php")
-//    Call<RSResponse> getQuiz(@Field("datequiz") String date, @Field("timequiz") String time);
-//
-//    @GET("GetQuestionQuiz.php")
-//    Call<RSResponse> loadQuestion(@Query("id_quiz") int id_quiz);
 }

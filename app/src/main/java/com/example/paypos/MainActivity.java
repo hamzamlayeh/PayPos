@@ -16,6 +16,8 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
+import static com.example.paypos.Utils.Util.getUname;
+
 public class MainActivity extends AppCompatActivity {
     @BindView(R.id.toolbar)
     Toolbar toolbar;
@@ -48,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.action_profil:
                 new android.support.v7.app.AlertDialog.Builder(this)
                         .setIcon(android.R.drawable.ic_dialog_info)
-                        .setTitle("hamza")//remplacer par getUname(this)
+                        .setTitle(getUname(this))//remplacer par getUname(this)
                         .setNeutralButton("Ok", null)
                         .show();
                 break;
