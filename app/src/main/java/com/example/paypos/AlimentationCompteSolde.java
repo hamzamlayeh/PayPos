@@ -2,10 +2,10 @@ package com.example.paypos;
 
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
+import androidx.appcompat.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -73,7 +73,7 @@ public class AlimentationCompteSolde extends AppCompatActivity {
         Intent i;
         switch (item.getItemId()) {
             case R.id.action_profil:
-                new android.support.v7.app.AlertDialog.Builder(this)
+                new androidx.appcompat.app.AlertDialog.Builder(this)
                         .setIcon(android.R.drawable.ic_dialog_info)
                         .setTitle(getUname(this))//remplacer par getUname(this)
                         .setNeutralButton("Ok", null)

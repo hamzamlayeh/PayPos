@@ -1,7 +1,7 @@
 package com.example.paypos;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 import butterknife.ButterKnife;

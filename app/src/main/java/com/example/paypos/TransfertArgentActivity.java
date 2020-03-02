@@ -4,11 +4,11 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
-import android.support.v4.app.DialogFragment;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
+import androidx.fragment.app.DialogFragment;
+import androidx.core.content.ContextCompat;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
+import androidx.appcompat.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -19,7 +19,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.paypos.Model.RSResponse;
-import com.example.paypos.Model.TransfertArgent;
 import com.example.paypos.Model.UserInfos;
 import com.example.paypos.Utils.Constants;
 import com.example.paypos.Utils.Helpers;
@@ -209,7 +208,7 @@ public class TransfertArgentActivity extends AppCompatActivity {
         Intent i;
         switch (item.getItemId()) {
             case R.id.action_profil:
-                new android.support.v7.app.AlertDialog.Builder(this)
+                new androidx.appcompat.app.AlertDialog.Builder(this)
                         .setIcon(android.R.drawable.ic_dialog_info)
                         .setTitle(getUname(this))
                         .setNeutralButton("Ok", null)
